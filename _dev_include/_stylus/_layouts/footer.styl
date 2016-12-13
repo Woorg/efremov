@@ -1,0 +1,122 @@
+
+.bottom-section
+  margin 60px 0 40px
+  padding 45px 0
+  border-top 1px solid #e3e3e3
+  border-bottom 1px solid #e3e3e3
+
+.bottom-section__col
+  float left
+  width 24%
+  margin-right 2%
+  &:last-child
+    margin 0
+
+.bottom-section__menu
+  margin 0
+  padding 0
+  list-style none
+
+.bottom-menu__item
+  margin-bottom 5px
+
+.bottom-menu__link
+  color #888888
+  text-decoration none
+  font-size 12px
+
+.bottom-section__col--right
+  float right
+  width 14.5%
+
+.bottom-section__lbl
+  display block
+  color #999
+  font-size 12px
+  margin-bottom 5px
+
+.bottom-section__call
+  text-decoration none
+  color black
+  font-size 20px
+  letter-spacing 0.05em
+  strong
+    font-family fBold
+
+.bottom-section__pay
+  display inline-block
+  margin-left 3%
+  vertical-align middle
+  &.i-visa
+    margin-right 20px
+
+.bottom-section__field
+  &:not(:last-child)
+    margin-bottom 17px
+
+.footer
+  margin 40px 0
+  text-align center
+
+.socials__item
+  display inline-block
+  margin 0 15px
+  vertical-align middle
+  height 19px
+  &:after
+    content ""
+    opacity 0
+    transition opacity .3s
+    display block;
+    height 100%
+    width 100%
+  &, &:after
+    background url(../_img/sprite.svg) no-repeat 0 0 / 100% auto
+  &:hover
+    &:after
+      opacity 1
+
+.socials__item--fb
+	width 11px
+	background-position $is-facebook-b
+	&:after
+		background-position $is-facebook
+
+.socials__item--vk
+	width 14px
+	background-position $is-vk-b
+	&:after
+		background-position $is-vk
+
+.socials__item--ok
+	width 12px
+	background-position $is-odnoklassniki-b
+	&:after
+		background-position $is-odnoklassniki
+
+.socials__item--inst
+	width 19px
+	background-position $is-instagram-b
+	&:after
+		background-position $is-instagram
+
+.footer__text
+  margin 45px 0 17px
+  font-size 12px
+  color #888
+
+@media (max-width: desktop)
+  .bottom-section
+    margin 40px 0 30px
+  .bottom-section__col--right
+    width 20%
+
+@media (max-width: tablet)
+  .bottom-section
+    display none
+  .footer
+    margin 30px 0
+  .socials
+    display none
+  .footer__text
+    margin-top 30px

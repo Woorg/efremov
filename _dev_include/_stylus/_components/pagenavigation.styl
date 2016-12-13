@@ -1,0 +1,42 @@
+
+.pager
+  display inline-block
+  vertical-align middle
+  position relative
+  &[data-count]:after
+    content attr(data-count)
+    position absolute
+    top - 30px
+    right 5px
+    font-size 12px
+    color black
+
+.pager__number
+  float left
+  padding 5px 0
+  width 40px
+  text-align center
+  border 1px solid #d7d7d7
+  font: inherit
+  outline 0
+  margin-right 19px
+  transition border-color .3s
+  &:focus
+    border-color #7a7a7a
+
+.pager__arrow
+  float left
+  width 25px
+  height 25px
+  text-decoration none
+  margin-top 3px
+
+.pager__arrow--prev
+  transform scale(-1)
+
+.pager__item
+  float left
+  text-decoration none
+  padding 6px 9px
+  &:not(.is-active)
+    color #4a4a4a

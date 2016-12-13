@@ -1,0 +1,277 @@
+.header
+	padding-top 20px
+
+.container--inner
+	.header
+		border-bottom 1px solid #eee
+		margin-bottom 30px
+	.catalog-menu
+		margin-bottom 20px
+
+
+.header__cols
+	margin-bottom 3.7%
+
+.header__col--right
+	text-align right
+
+.c-menu
+	margin 0
+	padding 0
+	list-style none
+
+.c-menu__item
+	display inline-block
+
+.c-menu--top
+	margin-bottom 12.5%
+	white-space nowrap
+	& > li
+		margin-right 15px
+	&.c-menu--right
+		margin-bottom 15.6%
+		& > li
+			margin-right 0
+			margin-left 15px
+
+.header__phone
+	display block
+	white-space nowrap
+	color black
+	font-size 20px
+	text-decoration none
+	letter-spacing .05em
+
+.header__logo
+	text-align center
+	margin-top 5%
+	a
+		text-decoration none
+
+.header__handlers
+	margin-right 5%
+	white-space nowrap
+
+.header__handler
+	position relative
+	display inline-block
+	margin-left 11.9%
+	height 27px
+	vertical-align middle
+	&[data-value]:after
+		content attr(data-value)
+		position absolute
+		font-size 11px
+		border-radius 20px
+		display block
+		top -8px
+		right -9px
+		width 20px
+		height 20px
+		background #fee4c9
+		color baseColorDark
+		text-align center
+		line-height 1.95em
+		pointer-events none
+
+.header__search-field
+	position absolute
+	right 0
+	bottom 0
+	padding-right 30px
+	border 0
+	outline 0
+	opacity 0
+	width 0
+	pointer-events none
+	transition width .3s, opacity 3s
+	overflow hidden
+	height 26px
+	border-bottom 1px solid baseColorDark
+	background white
+
+.header__search-field--active
+	opacity 1
+	pointer-events auto
+	width 212px
+
+.header__search-btn
+	position relative
+	width 22px
+	height 22px
+
+.header__handler-like
+	width 23px
+	height 23px
+
+.header__handler-basket
+	width 24px
+	height 24px
+
+.catalog-menu
+	text-align center
+	margin 0 0 25px
+
+.catalog-menu__list
+	margin 0
+	padding 0
+	list-style none
+
+.catalog-menu__item
+	display inline-block
+	margin 10px 2.2%
+	& > a
+		text-decoration none
+		color black;
+		font-size 14px
+		text-transform uppercase
+		letter-spacing .06em
+		border-bottom 1px solid transparent
+		&:hover
+			border-color hLinkColorLight
+
+.header__handlers-mobile
+	white-space nowrap
+	margin-top 30px
+
+.header__m-handler
+	position relative
+	&:before
+		content ''
+		position absolute
+		top -15px
+		bottom -15px
+		left -10px
+		right -10px
+
+.header__handlers--right
+	margin-right 20px
+	.header__m-handler
+		margin-left 22px
+
+.header__handlers--left
+	margin-left 20px
+	.header__m-handler
+		margin-right 22px
+
+.header__m-handler--search
+	width 18px
+	height 18px
+
+.header__m-handler--like
+	width 19px
+	height 17px
+
+.header__m-handler--basket
+	width 21px
+	height 22px
+
+.h-burger
+	position relative
+	display inline-block
+	width 20px
+	height 14px
+	border-top 1px solid #999
+	border-bottom 1px solid #999
+	vertical-align middle
+	user-select none
+	&:after
+		content ''
+		position absolute
+		border-top 1px solid #999
+		width 100%
+		top 5px
+
+.mobile-menu
+	background-color #f9f9f9
+	position fixed
+	transition transform 0.5s ease
+	width 206px
+	height 100%
+	top 0
+	z-index 99
+	right 100%
+	overflow-x hidden
+	li
+		width 100%
+		display block
+		text-overflow ellipsis
+	a
+		display block
+		padding 5px 0
+
+.mobile-menu__list
+	margin 0
+	padding 23px 0 0
+	list-style none
+	li
+		padding-left 30px
+
+.mobile-menu__item--main
+	margin-bottom 7px
+	& > a
+		color black
+		text-transform uppercase
+		text-decoration none
+		letter-spacing .05em
+
+.mobile-menu__item--call
+	border-top 1px solid #e4e4e4
+	border-bottom 1px solid #e4e4e4
+	padding-top 5px
+	padding-bottom 2px
+	margin-bottom 10px
+	& > a
+		text-decoration none
+		font-size 18px
+		color black
+		letter-spacing .05em
+		strong
+			font-family fBold
+
+.mobile-menu__item--sec
+	margin-bottom 7px
+	& > a
+		text-decoration none
+
+.mobile-menu--active
+	transform translateX(206px)
+
+.mobile-menu__close
+	position absolute
+	top 10px
+	right 10px
+	z-index 1
+	width 20px
+	height 20px
+	cursor pointer
+	&:after
+		content ""
+		position absolute
+		top - 10px
+		right -10px
+		bottom -10px
+		left -10px
+
+@media (max-width: tablet)
+	.c-menu--top,
+	.header__phone,
+	.header__city,
+	.catalog-menu,
+	.header__handler--search,
+	.header__handlers
+		display none
+	.header,
+	.content
+		padding 0
+	.header__cols
+		margin 0
+	.header,
+	.header__col
+		height 80px
+	.header__logo
+		width 77px
+		margin 16px auto 0 auto
+
+//@media (max-width: mobile)
+

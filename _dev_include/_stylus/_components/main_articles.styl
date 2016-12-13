@@ -1,0 +1,140 @@
+
+.main-articles
+  margin 75px 0
+  display flex
+
+.main-articles__item
+  width 31%
+  background-color #f9f9f9
+  margin-right 3%
+  &:nth-child(2n+2)
+    margin-right 0
+
+.main-articles__image
+  float left
+  width 100%
+  text-decoration none
+  overflow hidden
+
+.main-articles__body
+  float left
+  width 100%
+  text-align center
+
+.main-articles__link
+  font-size 20px
+  color black
+  text-decoration none
+  line-height 1.2em
+  border-bottom 1px solid transparent
+  &:hover
+    border-color hLinkColorLight
+
+.main-articles__caption
+  margin 0 0 15px
+  display block
+
+.main-articles__text
+  color #999
+  font-size 14px
+  text-align left
+  width 75%
+  margin 15px auto
+
+.main-articles__inner
+  display table-cell
+  vertical-align middle
+  height 380px
+  padding 5% 0
+
+.main-articles__item--big
+  width 66%
+  .main-articles__image
+    width 48%
+  .main-articles__body
+    width 52%
+    height 100%
+    margin 0
+  .main-articles__caption
+    margin-bottom 25px
+  .main-articles__link
+    font-size 30px
+  .main-articles__text
+    font-size 18px
+    width 66%
+    margin 25px auto 15px auto
+
+@media (max-width: desktop)
+  .main-articles
+    margin 40px 0
+
+  .main-articles__item--big
+    .main-articles__link
+      font-size 26px
+
+  .main-articles__item--big
+    .main-articles__text
+      font-size 16px
+
+  .main-articles__inner
+    height 300px
+
+@media (max-width: tablet)
+  .main-articles__link
+    font-size 16px
+
+  .main-articles__item--big
+    .main-articles__link
+      font-size 22px
+
+  .main-articles__item--big
+    .main-articles__text
+      font-size 14px
+
+@media (max-width: mobile)
+  .main-articles
+    margin-bottom 0
+  .main-articles__item
+    width 50%
+    margin 0
+    padding 20px
+
+  .main-articles__item--big
+    .main-articles__body
+      width 100%
+      height auto
+
+  .main-articles__link
+    margin 0 !important
+    font-size 16px !important
+
+  .main-articles__item--big
+    .main-articles__image
+      width 100%
+
+  .main-articles__inner
+    height auto
+    padding 0
+
+  .main-articles__image
+    height 200px
+    img
+      height 100%
+      max-width inherit
+
+  .main-articles__text
+    margin 15px auto !important
+    width 100% !important
+
+  .main-articles__caption
+    margin 15px 0 !important
+
+@media (max-width: small)
+  .main-articles__item
+    padding 20px 10px
+  .main-articles__image
+    height 145px
+  .main-articles__caption
+    margin 10px 0 !important
+  .main-articles__text
+    margin 10px auto !important

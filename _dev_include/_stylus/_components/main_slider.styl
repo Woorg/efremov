@@ -1,0 +1,159 @@
+
+.main-slider
+  margin-bottom 50px
+
+.main-slider__wrapper
+  max-height 570px
+
+.main-slider__item
+  height 570px
+  img
+    position absolute
+    z-index -1
+    opacity 0
+
+.main-slider__content
+  display block
+  width 100%
+  height 100%
+  color white
+  transition opacity .3s
+  opacity 0
+  background-repeat no-repeat
+  background-size cover
+  background-position center
+  &.main-slider__content--ready
+    opacity 1
+
+.main-slider__body
+  padding 2.1% 0 0 0
+
+.main-slider__caption
+  display block
+  font-size 34px
+  font-family fUltraLight
+  text-transform uppercase
+  letter-spacing .05em
+
+.main-slider__title
+  font-size 34px
+  font-family fLight
+  text-transform uppercase
+  letter-spacing .14em
+  margin 0 0 1.9%
+
+.main-slider__text
+  font-size 24px
+  font-family fUltraLight
+  line-height 1.2em
+  letter-spacing .02em
+  margin 1.9% 0 3%
+
+.main-slider__btn
+  font-size 30px
+  font-family fUltraLight
+  letter-spacing 0.19em
+  border 1px solid
+  color white
+  border-radius 10px
+  padding 10px 83px
+  text-transform uppercase
+  transition background-color .3s
+  &:hover
+    border-color white
+    color white
+    background-color rgba(255, 255, 255, .2)
+
+.main-slider__nav
+  text-align center
+  margin-top 20px
+  user-select none
+
+.main-slider__pager
+  display inline-block
+  vertical-align middle
+  & > span
+    display inline-block
+    width 12px
+    height 12px
+    cursor pointer
+    background white
+    border 1px solid colorLight
+    border-radius 50%
+    margin 0 15px
+    transition background-color .3s, border-color .3s
+    vertical-align middle
+    &:hover, &.swiper-pagination-bullet-active
+      background-color colorWarm
+      border-color colorWarm
+
+.main-slider__nbtn
+  display inline-block
+  width 23px
+  height 23px
+  cursor pointer
+  vertical-align middle
+  opacity .2;
+  transition opacity .3s
+  &:hover
+    opacity .6
+
+.main-slider__nbtn-next
+  margin-left 5px
+
+.main-slider__nbtn-prev
+  transform rotate(180deg)
+  margin-right 5px
+
+@media (max-width: desktop)
+  .main-slider__item
+    height 450px
+  .main-slider__body
+    padding-left 10px
+    padding-right 10px
+  .main-slider__nav
+    margin-top 15px
+  .main-slider
+    margin-bottom 30px
+
+@media (max-width: tablet)
+  .main-slider__item
+    height 350px
+  .main-slider__caption,
+  .main-slider__title
+    font-size 28px
+  .main-slider__text
+    font-size 22px
+  .main-slider
+    margin 0
+  .main-slider__btn
+    font-size 22px
+    padding 7px 60px
+  .main-slider__nav
+    display none
+
+@media (max-width: mobile)
+  .main-slider__item
+    height 250px
+  .main-slider__caption,
+  .main-slider__title
+    font-size 20px
+  .main-slider__text
+    font-size 18px
+  .main-slider__btn
+    font-size 18px
+    padding 5px 30px
+
+@media (max-width: small)
+  .main-slider__item
+    height 150px
+  .main-slider__caption,
+  .main-slider__title
+    font-size 16px
+  .main-slider__text
+    font-size 14px
+  .main-slider__btn
+    font-size 14px
+    padding 3px 17px
+    border-radius 50px
+

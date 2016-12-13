@@ -1,0 +1,458 @@
+
+.catalog__header
+  display flex
+  flex-flow row wrap
+  justify-content space-between
+  margin-bottom 45px
+
+.catalog__title
+  flex 1 1 277px
+  margin 0
+  text-align left
+  line-height 1.3em
+
+.catalog__description
+  flex 4 1 600px
+  margin 10px 0 0
+  padding-right 19%
+  font-size 12px
+  line-height 1.5em
+
+.catalog__handle--sort
+  flex 3 1 500px
+
+.catalog__handle--view
+  flex 1 1 160px
+
+.catalog__handle--pager
+  flex 1 1 335px
+  text-align right
+
+.catalog__inner
+  display flex
+  justify-content space-between
+  flex-flow row wrap
+
+.catalog__top-handlers
+  flex 3 1 100%
+  order 1
+  display flex
+  justify-content space-between
+  margin-bottom 26px
+
+.catalog__filter
+  flex 1 1 15.5%
+  order 2
+  background-color #fbf8f3
+  border 1px solid #eee
+  border-radius 2px
+  padding 27px 10px 20px 10px
+
+.catalog__filter-row
+  display block
+  padding 0
+  border 0
+  margin 0 0 40px 0
+
+.catalog__filter-caption
+  display block
+  margin-bottom 20px
+  color black
+  font-family fBold
+  width 100%
+  text-overflow ellipsis
+  overflow hidden
+  text-transform uppercase
+  letter-spacing 0.05em
+  padding-left 32px
+
+.catalog__filter-handler
+  display block
+  height 23px
+  width 70%
+  margin 0 auto
+  border 1px solid #ccc
+  border-radius 2px
+  cursor pointer
+  color black
+  transition border-color .3s
+  text-align center
+  font-style normal
+  font-size 12px
+  &:before
+    content 'Ещё'
+    line-height 1.7em
+  &.is-active:before
+    content ''
+    display inline-block
+    width 20px
+    height 20px
+    background $imgSprite no-repeat $is-arrow / 100% auto transparent
+    transform rotate(-90deg)
+  &:hover
+    border-color #7a7a7a
+
+.catalog__body
+  flex 2 1 70%
+  order 3
+  align-self flex-start
+  display flex
+  flex-flow row wrap
+
+.catalog__views
+  flex 1 1 100%
+  width 100%
+  order 1
+  display flex
+  flex-flow row wrap
+  border-top 1px solid #eee
+  border-radius 2px
+  box-shadow inset -1px -1px 0 0 #eee
+  margin-bottom 30px
+
+.catalog__views-item
+  display inline-block
+  text-decoration none
+  color black
+  flex 1 1 243px
+  padding 7px 5px 7px 20px
+  white-space nowrap
+  overflow hidden
+  width 25%
+  max-width 25%
+  border-bottom 1px solid #eee
+  border-right 1px solid #eee
+
+.catalog__views-image
+  vertical-align middle
+
+.catalog__views-title
+  display inline-block
+  margin-left 15px
+  vertical-align middle
+
+.catalog__apply
+  flex 1 1 100%
+  width 100%
+  order 2
+  text-align center
+  margin-bottom 28px
+
+.catalog__apply-item,
+.catalog__apply-clear
+  position relative
+  display inline-block
+  cursor pointer
+  margin 2px
+  transition background-color .2s, border-color .2s, color .2s
+  vertical-align middle
+  padding 3px 9px
+  color black
+  &:after
+    content ''
+    position absolute
+    background $svgSprite no-repeat $is-cross / 100% auto transparent
+    width 17px
+    height 17px
+    top calc(50% - 8px)
+
+.catalog__apply-clear
+  border 1px solid #c8c8c8
+  padding-right 25px
+  &:after
+    right 5px
+
+.catalog__apply-item
+  background-color #f9f9f9
+  border 1px solid #f9f9f9
+  &:after
+    left calc(50% - 8px)
+    opacity 0
+    transition opacity .2s
+  &:hover
+    border-color #c8c8c8
+    background-color white
+    color #f0f0f0
+    &:after
+      opacity 1
+
+.catalog__items
+  flex 1 1 100%
+  width 100%
+  order 3
+  display flex
+  flex-flow row wrap
+
+.catalog__item
+  flex 1 1 243px
+  display inline-block
+  text-decoration none
+  max-width 25.1%
+  padding 3% 3% 2.5% 3%
+  margin -1px 0 0 -1px
+  border 1px solid #eee
+  text-align center
+  color black
+  position relative
+  z-index 1
+  transition color .3s, border-color .3s, z-index .3s
+  &:after
+    content ''
+    position absolute
+    display block
+    top -1px
+    right -1px
+    bottom -1px
+    left -1px
+    z-index 1
+    border-left 1px solid #e8c262
+    border-right 1px solid #f4b8b0
+    background-position: 0 0, 0 100%;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to right, #e8c262 0%, #f4b8b0 100%),
+            linear-gradient(to right, #e8c262 0%, #f4b8b0 100%);
+    opacity 0
+    transition opacity .3s
+  &:hover
+    z-index 2
+    &:after
+    .catalog__btn
+      opacity 1
+
+.catalog__image
+  margin-bottom 30px
+
+.catalog__price
+  display block
+  text-align left
+  font-size 18px
+  position relative
+
+.catalog__name
+  display block
+  text-align left
+  margin 1px 0 16px 0
+
+.catalog__btn
+  font-size 12px
+  color black
+  text-transform uppercase
+  padding 5px 0
+  background-color #e5c84b
+  border-radius 2px
+  width 100%
+  opacity 0
+  transition opacity .3s
+
+.catalog__like
+  width 18px
+  height 18px
+  position absolute
+  right 0
+  top 2px
+
+.catalog__badge
+  position absolute
+  top 10px
+  right 10px
+
+.catalog__bottom-handlers
+  flex 3 1 100%
+  order 4
+  display flex
+  justify-content flex-end
+  margin 65px 0 40px 0
+  .catalog__handle--view
+    flex-grow 0
+    flex-basis 225px
+  .catalog__handle--pager
+    flex-grow 0
+    flex-basis 360px
+
+// modal filter
+
+.mobile-filter
+  text-align center
+
+.mobile-filter__inner
+  display flex
+  justify-content space-between
+  flex-flow row wrap
+
+.mobile-filter__item
+  flex 1 1 33%
+  color black
+  padding 4px 25px 4px 7px
+  background-color white
+  border 1px solid #d0d0d0
+  border-radius 2px
+  margin 0 5px 10px 5px
+  min-width 150px
+  text-align left
+  &:after
+    content '+'
+    position absolute
+    width 15px
+    height 15px
+    top 0
+    right 5px
+    font-size 20px
+    color #c8c8c8
+  &.is-active
+    border-color black
+    &:after
+      color black
+
+.mobile-filter__clear
+  color #6e6e6e
+  border 1px solid #c8c8c8
+  border-radius 2px
+  padding 3px 45px 3px 25px
+  margin-top 5px
+  &:after
+    content ''
+    position absolute
+    width 17px
+    height 17px
+    display block
+    top 5px
+    right 10px
+    background $svgSprite no-repeat $is-cross / 100% auto transparent
+
+.modal-filter__list
+  list-style none
+  padding 0
+  margin 0
+  overflow hidden
+
+.modal-filter__list--child
+  padding-left 15px
+  display none
+
+.modal-filter__item--parent
+  border-bottom 1px solid #e5e5e5
+  &:last-child
+    border 0
+
+.modal-filter__lbl
+.modal-filter__expand
+  padding 8px 30px 8px 0
+  position relative
+  overflow hidden
+  text-overflow ellipsis
+  white-space nowrap
+  display block
+  &:after
+    content ''
+    display block
+    position absolute
+
+.modal-filter__lbl
+  color #5f5f5f
+  &:after
+    top 10px
+    right 8px
+    width 15px
+    height 15px
+    border-radius 15px
+    border 1px solid #dcdcdc
+    background-color white
+    transition background-color .2s, border-color .2s
+
+input[type=checkbox]:checked + .modal-filter__lbl
+  &:after
+    border-color #6f6f6f
+    background-color #6f6f6f
+
+.modal-filter__expand
+  color black
+  font-family fBold
+  display block
+  padding 8px 25px 8px 0
+  &:after
+    top 8px
+    right 6px
+    width 20px
+    height 20px
+    background $svgSprite no-repeat $is-arrow / 100% auto transparent
+    transform rotate(90deg)
+    transition transform .2s
+  &.is-active:after
+      transform rotate(-90deg)
+
+.catalog__back
+	display block
+	text-decoration none
+	margin 0 0 20px 10px
+	&:before
+		content ''
+		display inline-block
+		margin-right 10px
+		width 21px
+		height 21px
+		background $svgSprite no-repeat $is-back / 100% auto transparent
+		vertical-align middle
+
+@media (max-width: desktop)
+  .catalog__description
+    padding-right 5%
+  .catalog__header
+    margin-bottom 35px
+  .catalog__handle--pager
+    flex-basis 475px
+  .catalog__handle--view
+    flex-basis 280px
+  .catalog__handle--sort
+    flex-basis 550px
+  .catalog__views
+  .catalog__apply
+  .catalog__filter-row
+    margin-bottom 20px
+  .catalog__views-item
+    max-width 33.333333%
+  .catalog__item
+    max-width 33.444444%
+
+@media (max-width: tablet)
+  .catalog__description
+  .catalog__handle--pager
+  .catalog__handle--view
+  .catalog__views
+  .catalog__apply
+  .catalog__filter-row
+  .catalog__bottom-handlers
+    display none
+  .catalog__top-handlers
+    padding 0 10px
+  .catalog__header
+    margin-bottom 20px
+    padding 0 10px
+  .catalog__filter
+    flex-basis 100%
+    margin-bottom 20px
+    padding 20px 5px 10px 5px
+
+
+@media (max-width: mobile)
+  .catalog__header
+    margin-bottom 15px
+  .catalog__title
+    font-size 20px !important
+  .catalog__top-handlers
+    margin-bottom 16px
+  .catalog__items
+    padding 0 20px
+    justify-content center
+  .catalog__item
+    max-width 260px
+
+@media (max-width: small)
+  .catalog__filter
+    border-left 0
+    border-right 0
+    border-radius 0
+  .catalog__items
+    padding 0 10px
+  .catalog__item
+    border 0

@@ -1,0 +1,15 @@
+
+$imgSprite = url(../_img/sprite.svg?v={{spriteHeight}})
+
+.is-icon
+  background-size 100% auto
+  background-image $imgSprite
+
+{{#shapes}}
+ $is-{{base}} = 0 {{position.relative.y}}%
+{{/shapes}}
+
+{{#shapes}}
+.is-icon--{{base}}
+    background-position $is-{{base}}
+{{/shapes}}

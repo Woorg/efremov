@@ -1,0 +1,457 @@
+@import "_helpers/variables.styl"
+@import "_helpers/fonts.styl"
+@import "_helpers/mixins.styl"
+@import "_helpers/sprite.styl"
+@import "_helpers/svg_sprite.styl"
+
+
+/*============================================================
+	TODO basic styles
+ =============================================================*/
+
+*, :after, :before
+	box-sizing border-box
+
+::selection
+	background-color hLinkColorLight
+
+::placeholder
+	color baseColor
+	font-family fLight
+
+img
+	border 0
+	max-width 100%
+	height auto
+
+.clearfix:after
+	visibility hidden
+	height 0
+	line-height 0
+	display block
+	clear both
+	content: ''
+
+html
+	line-height 1.4
+	font-size 14px
+	font-family fLight, Helvetica, serif
+	color baseColor
+	background-color white
+	height 100%
+	-webkit-font-smoothing antialiased
+	text-rendering optimizeSpeed
+
+body
+	height 100%
+
+a
+	border 0
+	color baseColor
+	transition color .3s, border-color .3s, background-color .3s
+
+a:hover
+	color baseColorDark
+
+strong, b, h1, h2, h3, h4, h5, h6
+	font-family fRegular
+	font-weight normal
+
+input
+	font-family inherit
+	font-size inherit
+
+/*============================================================
+	TODO templates styles
+ =============================================================*/
+
+.hidden
+	opacity 0
+	visibility hidden
+	overflow hidden
+	pointer-events none
+	width 0
+	height 0
+	display block
+
+.image-load
+	position relative
+	&:not(.loaded):before
+		content ""
+		position absolute
+		top 0
+		left 0
+		bottom 0
+		right 0
+		background: url('../_img/preloader.svg') no-repeat center center;
+	& > :first-child
+		opacity 0
+		visibility hidden
+		pointer-events none
+		transition opacity .3s
+	&.loaded
+		& > :first-child
+			opacity 1
+			visibility visible
+			pointer-events auto
+
+.h-light-image
+	img
+		transition filter .3s, opacity .3s
+	&:hover
+		img
+			filter brightness(106%)
+
+.h-center
+	text-align center
+	&:after
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+		content: "";
+	& > :first-child
+		vertical-align middle
+		display inline-block
+
+.h-link
+	text-decoration none
+	border-bottom 1px solid transparent
+
+.h-3-col,
+.s-3-col
+	float left
+	width 33.3333333%
+
+.h-2-col
+	float left
+	width 66.6666666%
+
+.h-link:hover
+	border-color hLinkColorLight
+
+.d-link
+	text-decoration none
+	border-bottom 1px dashed
+
+.i-icon, .h-icon, .is-icon
+	background-repeat no-repeat
+	border 0
+	display inline-block
+	background-color transparent
+	outline 0
+	vertical-align middle
+
+.i-icon
+	background-image url('../_img/sprite.png')
+
+.h-icon
+	background-size cover
+	background-position center
+
+.i-icon--hover
+	transition opacity .3s
+	cursor pointer
+	&:hover
+		opacity .6
+
+.h-load
+	background: url('../_img/preloader.svg') no-repeat center center;
+
+.btn
+	border 0
+	margin 0
+	padding 0
+	outline 0
+	background transparent
+	vertical-align middle
+	display inline-block
+	text-decoration none
+	cursor pointer
+	text-align center
+	transition color .3s, border-color .3s, background-color .3s
+	position relative
+	&:disabled
+		cursor not-allowed
+
+.section-title
+	color black
+	text-align center
+
+.section-title--nt0
+	font-size 24px
+	margin 0 0 35px
+
+.section-title--nt1
+	font-size 30px
+	margin 0 0 45px
+
+.rub
+	font-family fRub
+
+.echo
+	transition opacity .3s
+	opacity 0.4
+	&.echo-loaded
+		opacity 1
+
+.section
+	margin 45px 0
+
+.check-btns
+	display inline-block
+	vertical-align middle
+
+.check-btns__item
+	float left
+	position relative
+	text-decoration none
+	padding 5px 16px
+	border 1px solid #d7d7d7
+	transition color .3s, border-color .3s, box-shadow .3s
+	z-index 1
+	margin 2px 0 2px 0
+	&:not(:first-child)
+		margin-left -1px
+	&:last-of-type
+		box-shadow none !important
+		border-right 1px solid #d7d7d7
+	&:hover, &.is-active
+		border-color #7a7a7a
+		color #7a7a7a
+		z-index 2
+
+.fields-lbl
+	float left
+	margin-right 20px
+	font-family fRegular
+	color black
+	padding 6px 0
+
+input[type=checkbox]
+	display none
+
+.checkbox-label
+	display block
+	color black
+	position relative
+	margin 0 0 21px 32px
+	cursor pointer
+	&:before
+		content ''
+		position absolute
+		display block
+		left -32px
+		top 2px
+		width 14px
+		height 14px
+		border 1px solid #d7d7d7
+	&:after
+		content ''
+		display block
+		position absolute
+		left -29px
+		top -1px
+		width 0
+		height 14px
+		background $imgSprite no-repeat $is-check / 14px auto transparent
+		transition width .2s
+
+input[type=checkbox]:checked + .checkbox-label
+	&:after
+		width 14px
+
+.c-badge
+	display inline-block
+	width 40px
+	height 40px
+	border-radius 40px
+	overflow hidden
+	font-size 12px
+	text-align center
+	z-index 1
+	&:before
+	&:after
+		content ''
+		position absolute
+		display block
+		border-radius 40px
+	&:before
+		top 0
+		left 0
+		right 0
+		bottom 0
+		z-index 1
+	&:after
+		line-height 3.3em
+		top 1px
+		left 1px
+		bottom 1px
+		right 1px
+		z-index 2
+		background white
+
+.c-badge--sale
+	color #ea6666
+	&:before
+		background linear-gradient(135deg, #ee9185 0%, #e8c15f 100%)
+	&:after
+		content 'Sale'
+
+.c-badge--new
+	color #04be45
+	&:before
+		background linear-gradient(135deg, #2ccd5d 0%, #16e4d9 100%)
+	&:after
+		content 'New'
+
+// modals
+
+.modal
+	position fixed
+	top 0
+	right 0
+	bottom 0
+	left 0
+	z-index 9999
+	text-align center
+	overflow-x hidden
+	opacity 0
+	visibility hidden
+	pointer-events none
+	transition opacity .3s, visibility .3s
+	padding-top 10px
+	&.is-open
+		opacity 1
+		visibility visible
+		pointer-events auto
+		.modal__inner
+			transform scale(1)
+	&:before
+		content ''
+		position fixed
+		top 0
+		right 0
+		bottom 0
+		left 0
+		z-index 1
+		background-color rgba(0, 0, 0, .5)
+	&:after
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+		content: "";
+
+.modal__inner
+	position relative
+	border-radius 3px
+	z-index 10
+	vertical-align middle
+	display inline-block
+	background-color white
+	padding 40px 20px 20px
+	max-width 90%
+	text-align left
+	transform scale(.9)
+	transition transform .3s
+
+.modal__close
+	position absolute
+	top 12px
+	left calc(50% - 8px)
+	width 17px
+	height 17px
+	&:after
+		content ''
+		position absolute
+		top -12px
+		bottom -5px
+		left -30px
+		right -30px
+
+.modal__title
+	text-align center
+	font-size 14px
+	color black
+	margin 0 0 20px
+	text-transform uppercase
+	font-family fBold
+	letter-spacing .1em
+
+.modal__content--mobile
+	width 710px
+	max-width 100%
+
+/*============================================================
+	TODO styles
+ =============================================================*/
+
+.container
+	width 100%
+	min-height 100%
+	margin 0 auto
+	max-width 1920px
+	overflow-x hidden
+
+.content
+	margin 0 auto
+	width 1220px
+	max-width 100%
+
+.logo-small
+	display inline-block
+	width 94px
+	height 51px
+	background-image url('../_img/logo-min.png')
+
+@media (max-width: desktop)
+	.content
+		width 980px
+	.section
+		margin 30px 0
+	.section-title--nt1
+		font-size 26px
+
+@media (max-width: tablet)
+	.content
+		width 750px
+	.section-title--nt1
+		font-size 24px
+		margin-bottom 35px
+
+@media (max-width: mobile)
+	.section-title--nt1
+		font-size 20px
+		margin-bottom 25px
+
+@media (max-width: small)
+	.section-title--nt0
+		font-size 18px
+		margin-bottom 25px
+	.section-title--nt1
+		font-size 16px
+		margin-bottom 15px
+	.check-btns__item
+		font-size 12px
+		padding 5px 7px
+
+@media (min-width: tablet)
+	.main-socials__item--inst
+	.mobile-toggle
+		display none !important
+
+@import "_components/breadcrumbs.styl"
+@import "_components/pagenavigation.styl"
+@import "_components/swiper_basic.styl"
+@import "_components/main_slider.styl"
+@import "_components/main_collections.styl"
+@import "_components/slider.styl"
+@import "_components/main_articles.styl"
+@import "_components/subscribe.styl"
+@import "_components/groups.styl"
+@import "_components/main_soc.styl"
+
+@import "_layouts/header.styl"
+@import "_layouts/catalog.styl"
+@import "_layouts/footer.styl"
+
+

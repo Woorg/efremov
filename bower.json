@@ -1,0 +1,25 @@
+{
+  "name": "efremov",
+  "description": "",
+  "main": "",
+  "authors": [
+    ""
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "^3.1.1",
+    "normalize-css": "normalize.css#^5.0.0",
+    "swiper": "^3.4.0",
+    "imagesloaded": "^4.1.1",
+    "echojs": "^1.7.3"
+  }
+}

@@ -1,0 +1,138 @@
+
+.main-socials
+  margin 60px 0
+  display flex
+
+.main-socials__item
+  width 31%
+  border 1px solid #d7d7d7
+  position relative
+  &:before
+    content ""
+    padding-top 59%
+    display block
+  &:not(:last-child)
+    margin-right 3.5%
+
+.main-socials__inner
+  position absolute
+  display block
+  top 0
+  right 0
+  bottom 0
+  left 0
+  &:after
+    z-index 1
+  &:before
+    z-index 2
+  &:after,
+  &:before
+    content ""
+    position absolute
+    display inline-block
+    transition opacity .3s
+    background $imgSprite no-repeat 0 0 / 100% auto
+
+.main-socials__item--fb
+  &:hover
+    background-color #4867aa
+    border-color #4867aa
+  .main-socials__inner
+    &:before,
+    &:after
+      width 20px
+      height 34px
+      left calc(50% - 10px)
+      top calc(50% - 17px)
+    &:before
+      background-position $is-facebook
+    &:after
+      background-position $is-facebook-w
+
+.main-socials__item--vk
+  &:hover
+    background-color #3e6590
+    border-color #3e6590
+  .main-socials__inner
+    &:before,
+    &:after
+      width 22px
+      height 31px
+      left calc(50% - 11px)
+      top calc(50% - 15px)
+    &:before
+      background-position $is-vk
+    &:after
+      background-position $is-vk-w
+
+.main-socials__item--ok
+  &:hover
+    background-color #ee8208
+    border-color #ee8208
+  .main-socials__inner
+    &:before,
+    &:after
+      width 22px
+      height 34px
+      left calc(50% - 11px)
+      top calc(50% - 17px)
+    &:before
+      background-position $is-odnoklassniki
+    &:after
+      background-position $is-odnoklassniki-w
+
+.main-socials__item--inst
+  &:hover
+    background-color #404040
+    border-color #404040
+  .main-socials__inner
+    &:before,
+    &:after
+      width 31px
+      height 31px
+      left calc(50% - 15px)
+      top calc(50% - 15px)
+    &:before
+      background-position $is-instagram
+    &:after
+      background-position $is-instagram-w
+
+.main-socials__item:hover
+  .main-socials__inner:after
+    opacity 1
+  .main-socials__inner:before
+    opacity 0
+
+@media (max-width: desktop)
+  .main-socials
+    margin 40px 0
+
+@media (max-width: tablet)
+  .main-socials
+    margin 0
+  .main-socials__item
+    width 25%
+    margin 0 !important
+    border 0
+  .main-socials__inner
+      &:before
+        display none
+      &:after
+        transform scale(.8)
+  .main-socials__item--fb
+    background-color #4867aa
+  .main-socials__item--vk
+    background-color #3e6590
+  .main-socials__item--ok
+    background-color #ee8208
+  .main-socials__item--inst
+    background-color #404040
+
+@media (max-width: mobile)
+  .main-socials__item
+    height 80px
+    &:before
+      display none
+  .main-socials__inner
+    &:after
+      transform scale(.7)

@@ -1,0 +1,182 @@
+
+.collections
+  margin 20px 0 75px
+
+.collections__item
+  position relative
+  text-decoration none
+  height 380px
+  overflow hidden
+  &:nth-child(1)
+    background-image: linear-gradient(to right bottom, #fef9f2, #fffbfb);
+  &:nth-child(4)
+    background-image: linear-gradient(to right bottom, #f3fefe, #f9faff);
+  img
+    max-height 100%
+
+.collections__content
+  padding 7%
+  height 100%
+  display block
+
+.collections__body
+  float left
+  width 100%
+  height 100%
+  display table
+  &:after
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    content: "";
+
+.collections__image
+  display block
+  text-decoration none
+
+.collections__caption
+  font-size 24px
+  color black
+  font-family fRegular
+  line-height 1.5em
+  text-transform uppercase
+  letter-spacing .05em
+  margin: 0 0 1.4em
+  border-bottom 1px solid transparent
+  transition border-color .3s
+
+.collections__btn
+  color baseColor
+  font-size 12px
+  font-family fLight
+  text-transform uppercase
+  letter-spacing .1em
+  border 1px solid
+  padding 11px 29px
+  border-radius 2px
+  &:hover
+    color black
+
+.collections__item--big
+  .collections__image
+    float left
+    width 43%
+    height 100%
+    margin-right 9%
+  .collections__body
+    width 48%
+    text-align left
+  .collections__content
+    padding 3.4%
+
+a.collections__item
+  transition color .3s, box-shadow .3s, background-color .3s
+  box-shadow inset 0 0 0 1px transparent
+  .collections__caption
+    display inline
+  .collections__image
+    margin-top 2.5em
+  &:hover
+    box-shadow inset 0 0 0 1px #ededed
+    .collections__caption
+      border-color colorUlight
+
+a.collections__item--light
+  background-color white
+  &:hover
+    background-color #fff9f7
+  .collections__caption
+    border 0
+  .collections__image
+    margin 1.5em 0
+
+a.collections__item--fancy
+  color white
+  box-shadow none !important
+  &:hover
+    .collections__icon
+      transform scale(1.1)
+  .collections__content
+    background-size cover
+    background-position center
+
+.collections__label
+  text-transform uppercase
+  display block
+  margin-top 5px
+  letter-spacing .09em
+
+.collections__icon
+	display inline-block
+	transition transform .2s
+	border-top 14px solid transparent
+	border-left 20px solid white
+	border-bottom 14px solid transparent
+
+@media (max-width: desktop)
+  .collections
+    margin-bottom 50px
+  .collections__item
+    height 320px
+  .collections__caption
+    line-height 1.3em
+    margin-bottom 0.6em
+  a.collections__item
+    .collections__image
+      margin-top 2em
+  a.collections__item--light
+    .collections__image
+      margin .5em 0
+
+@media (max-width: tablet)
+  .collections
+    margin 0 0 35px
+  .collections__caption
+    font-size 20px
+  .h-2-col,
+  a.collections__item--fancy
+    width 100%
+  .s-3-col
+    width 50%
+
+@media (max-width: mobile)
+  .collections__item
+    height 250px
+  .collections__content
+    padding-top 0
+    padding-bottom 0
+  a.collections__item--fancy
+    height 305px !important
+  .collections__caption
+    font-size 16px
+    line-height 1.3em
+    margin-bottom 0.6em
+  .collections__image
+    img
+      max-height 130px
+  .collections__item--light
+    img
+      max-height 120px
+  .collections__btn
+    padding 9px 15px
+  .btn__hide
+    display none
+
+@media (max-width: small)
+  .collections__item
+    height 150px
+  .collections__caption
+    font-size 12px
+  a.collections__item
+    .collections__image
+      margin 0.4em 0 !important
+  .collections__image
+    img
+      max-height 80px
+  .collections__item--light
+    img
+      max-height 60px
+  .collections__btn
+    font-size 10px
+    padding 3px 5px
+    letter-spacing 0.01em
